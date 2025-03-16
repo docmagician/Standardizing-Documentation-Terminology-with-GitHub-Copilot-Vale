@@ -1,4 +1,4 @@
-# Standardizing-Documentation-Terminology-with-GitHub-Copilot-Vale
+# Standardizing Documentation Terminology with GitHub Copilot Vale
 ## Introduction
 As technical writers, our focus should be on understanding the product and delivering clear, helpful content, not stressing over style and terminology rules. Sure, consistency matters, but what if AI could handle that for us?
 
