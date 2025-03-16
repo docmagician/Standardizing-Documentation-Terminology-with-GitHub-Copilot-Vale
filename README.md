@@ -1,0 +1,1 @@
+# Standardizing-Documentation-Terminology-with-GitHub-Copilot-Vale
