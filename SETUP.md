@@ -11,3 +11,8 @@ GitHub Copilot is like having a smart writing partner right in your editor. It s
  Select **GitHub Copilot** (by GitHub) from the results.
 4. Click **Install**.
 5. Restart **VS Code** to complete the installation. 
+6. Open the **GitHub Copilot** settings by selecting the gear icon ⚙️ in the Extensions list.
+7. To sign up for GitHub Copilot:  
+     - **Create a GitHub Account**: Visit [GitHub's sign-up page](https://github.com/signup) to register.  
+     - **Subscribe to Copilot**: After signing in, go to the [GitHub Copilot subscription page](https://github.com/features/copilot) to choose a plan and subscribe.  
+     **Note**: An active GitHub Copilot subscription is required to use the service.
