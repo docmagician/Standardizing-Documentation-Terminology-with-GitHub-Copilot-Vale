@@ -1,6 +1,10 @@
 # Standardizing Documentation Terminology with GitHub Copilot Vale
 ## Introduction
-As technical writers, our focus should be on understanding the product and delivering clear, helpful content, not stressing over style and terminology rules. Sure, consistency matters, but what if AI could handle that for us?
+ A few months ago, I was reviewing a documentation update when I noticed something small but frustrating. One section said sign in, another said log in, and yet another had login as one word. It wasn’t a huge issue, but these little inconsistencies add up over time, making documentation messy and confusing for users.
+
+At first, I thought, Okay, I’ll just remind everyone to use the same term. But the more I looked, the more I realized how often these tiny inconsistencies slipped through. I started wondering if there was a way to automate this.
+
+After some research, I found a combination that actually works. GitHub Copilot and Vale can automatically check for terminology inconsistencies and keep our docs clean without extra effort. Vale acts like a proofreader, flagging issues before they make it into the docs. GitHub Actions runs these checks on every pull request. This setup makes terminology enforcement effortless and helps everyone focus on writing clear and useful content.
 
 This project integrates **GitHub Copilot** and **Vale** to automate terminology enforcement, ensuring standardized documentation with minimal effort. With AI managing consistency, you can focus on creating great content without the manual checks. It’s designed to make life easier for technical writers and developers by reducing the manual effort needed to keep documentation on point.
 ## 🎯 What’s the Goal?
