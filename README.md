@@ -4,9 +4,8 @@
 
 At first, I thought, Okay, I’ll just remind everyone to use the same term. But the more I looked, the more I realized how often these tiny inconsistencies slipped through. I started wondering if there was a way to automate this.
 
-After some research, I found a combination that actually works. GitHub Copilot and Vale can automatically check for terminology inconsistencies and keep our docs clean without extra effort. Vale acts like a proofreader, flagging issues before they make it into the docs. GitHub Actions runs these checks on every pull request. This setup makes terminology enforcement effortless and helps everyone focus on writing clear and useful content.
+After some research, I found a combination that actually works. **GitHub Copilot** and **Vale** can automatically check for terminology inconsistencies and keep our docs clean without extra effort. Vale acts like a proofreader, flagging issues before they make it into the docs. GitHub Actions runs these checks on every pull request. This setup makes terminology enforcement effortless and helps everyone focus on writing clear and useful content.
 
-This project integrates **GitHub Copilot** and **Vale** to automate terminology enforcement, ensuring standardized documentation with minimal effort. With AI managing consistency, you can focus on creating great content without the manual checks. It’s designed to make life easier for technical writers and developers by reducing the manual effort needed to keep documentation on point.
 ## 🎯 What’s the Goal?
 Let’s be real, keeping documentation consistent is hard. One writer says **sign in**, another says **log in**, and suddenly users are confused. We’ve all been there!
 #### This project is here to solve that chaos
