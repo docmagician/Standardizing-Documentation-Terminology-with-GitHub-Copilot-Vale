@@ -74,3 +74,5 @@ Vale is a simple tool that helps us keep our documentation consistent by making 
     displays: shows  
     refer: see  
   You can use file as it is attached in project and it would be great if you contribute to improve it.
+
+## Automate Terminology Checks in GitHub Actions
