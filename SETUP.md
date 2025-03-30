@@ -35,4 +35,14 @@ Vale is a simple tool that helps us keep our documentation consistent by making 
            ```sh    
           curl -fsSL https://install.vale.sh | sh
 2. Create a Vale Configuration File ``(.vale.ini)``
-     - In the root directory of your repository (where your documentation files are stored), create a new file named .vale.ini.  
+     - In the root directory of your repository (where your documentation files are stored), create a new file named ``.vale.ini``.  
+     Example:
+       ```sh 
+       📂 my-documentation-repo  
+        ├── 📄 .vale.ini  ✅ (This is the file you created)  
+        ├── 📂 .vale  
+        │    ├── 📂 Styles  
+        │         ├── Terminology.yml  
+        ├── 📄 README.md  
+        ├── 📄 guide.md  
+        ├── 📄 install.md  
