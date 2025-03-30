@@ -18,6 +18,21 @@ GitHub Copilot is like having a smart writing partner right in your editor. It s
      **Note**: An active GitHub Copilot subscription is required to use the service.
 9. Go to **VS Code** **Settings > Extensions > GitHub Copilot**.
 10. Enable GitHub Copilot if it's not already enabled.
-11.  Enable Copilot for Markdown (.md) and YAML (.yml) files.
+11.  Enable Copilot for Markdown (.md) and YAML (.yml) files. 
 
-✅ Copilot is now ready to assist with writing consistent documentation!
+✅ Copilot is now ready to assist with writing consistent documentation!  
+ 
+## Set Up Vale
+Vale is a simple tool that helps us keep our documentation consistent by making sure we're using the right terms. We'll set it up to catch any terminology issues as we write.
+1. Install Vale
+    - Windows (via Chocolatey)
+      ```sh
+      choco install vale 
+    -  Mac (via Homebrew)
+        ```sh    
+        brew install vale
+      -  Linux (via Curl)
+           ```sh    
+          curl -fsSL https://install.vale.sh | sh
+2. Create a Vale Configuration File ``(.vale.ini)``
+     - In the root directory of your repository (where your documentation files are stored), create a new file named .vale.ini.  
