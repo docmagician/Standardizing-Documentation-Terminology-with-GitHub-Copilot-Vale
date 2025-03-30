@@ -46,3 +46,21 @@ Vale is a simple tool that helps us keep our documentation consistent by making 
         ├── 📄 README.md  
         ├── 📄 guide.md  
         ├── 📄 install.md  
+3. Add content in the below content in the file
+   - ``StylesPath = .vale/Styles``
+   This tells Vale where to find custom rules (styles) that define terminology standards.  
+   - ``MinAlertLevel = warning``
+   This sets the alert level for rule violations. Setting it to warning ensures that Vale flags incorrect terminology but doesn’t prevent documentation updates.  
+   - ``[*.md]``
+   This specifies which files Vale should check.If you want to check YAML files too.  
+   - ``BasedOnStyles = Terminology``
+   This tells Vale to apply rules from a style file named Terminology.yml.
+   The file must be stored inside .vale/Styles/Terminology.yml
+   Example:
+      ```sh 
+     StylesPath = .vale/Styles  
+     MinAlertLevel = warning  
+
+     [*.md]  
+     BasedOnStyles = Terminology
+th
