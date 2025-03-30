@@ -61,6 +61,16 @@ Vale is a simple tool that helps us keep our documentation consistent by making 
      StylesPath = .vale/Styles  
      MinAlertLevel = warning  
 
-     [*.md]  
+     [*.{md,yml,yaml}]  
      BasedOnStyles = Terminology
-th
+    Note: You can use the same file as it is attached in project repository.  
+4. Create a Terminology Rules File. Inside .``vale/Styles/,`` create a file called ``Terminology.yml`` and add the following rules:
+    ```sh
+    extends: substitution  
+    message: "Use '%s' instead of '%s'."  
+    level: warning  
+    ignorecase: true  
+    swap:  
+    displays: shows  
+    refer: see  
+  You can use file as it is attached in project and it would be great if you contribute to improve it.
