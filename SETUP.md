@@ -75,3 +75,49 @@ Vale is a simple tool that helps us keep our documentation consistent by making 
   You can use file as it is attached in project and it would be great if you contribute to improve it.
 
 ## Automate Terminology Checks in GitHub Actions
+GitHub Actions is a workflow automation system built into GitHub. Let’s set it up to run Vale and ensure consistent terminology whenever someone pushes changes or opens a pull request.
+1. Create a .github/workflows folder in your repository to store your GitHub Actions workflow files.  
+2. Add a new YAML file for the workflow, e.g., terminology-check.yml.
+3.  Copy and paste the following workflow into the YAML file.
+```sh 
+ name: Terminology Check
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  check-terminology:
+    name: Run Vale Terminology Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout repository code
+        uses: actions/checkout@v3
+
+      - name: 📦 Install Vale
+        run: |
+          curl -fsSL https://install.vale.sh | sh
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+
+      - name: 🧪 Run Vale Terminology Linter
+        run: vale .
+
+      - name: ✅ Success Message
+        if: success()
+        run: echo "✅ Terminology check passed!"
+
+      - name: ❌ Failure Message
+        if: failure()
+        run: echo "❌ Terminology issues found. Please fix them before merging."
+
+
+
+
+
