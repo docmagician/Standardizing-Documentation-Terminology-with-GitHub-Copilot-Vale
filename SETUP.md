@@ -80,44 +80,50 @@ GitHub Actions is a workflow automation system built into GitHub. Let’s set it
 2. Add a new YAML file for the workflow, e.g., terminology-check.yml.
 3.  Copy and paste the following workflow into the YAML file.
 ```sh 
- name: Terminology Check
+name: Terminology Check
 
 on:
   push:
-    branches:
-      - main
-      - develop
+    branches: [main, develop]
   pull_request:
-    branches:
-      - main
-      - develop
+    branches: [main, develop]
 
 jobs:
   check-terminology:
-    name: Run Vale Terminology Check
     runs-on: ubuntu-latest
 
     steps:
-      - name: 📥 Checkout repository code
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: 📦 Install Vale
+      - name: Install Vale
         run: |
           curl -fsSL https://install.vale.sh | sh
           echo "$HOME/.local/bin" >> $GITHUB_PATH
 
-      - name: 🧪 Run Vale Terminology Linter
+      - name: Run Vale
         run: vale .
 
-      - name: ✅ Success Message
+      - name: Output on Success
         if: success()
-        run: echo "✅ Terminology check passed!"
+        run: echo "✅ Terminology check passed."
 
-      - name: ❌ Failure Message
+      - name: Output on Failure
         if: failure()
-        run: echo "❌ Terminology issues found. Please fix them before merging."
-
-
-
-
-
+        run: echo "❌ Issues found. Please fix terminology errors."
+  ```
+| Term/Section             | What It Means                                                                                                          |
+|--------------------------|-------------------------------------------------------------------------------------------------------------------------|
+| `name:`                  | The name of the workflow. Appears in the GitHub Actions tab. In this case, it’s called “Terminology Check.”           |
+| `on:`                    | Defines when this workflow should run. Here, it runs on push or pull request events targeting `main` and `develop`.   |
+| `push:` / `pull_request:`| These are triggers. The workflow runs automatically when code is pushed or a PR is opened for the listed branches.     |
+| `jobs:`                  | Groups all the steps needed to perform a task (a job).                                                                 |
+| `check-terminology:`     | The name of the job. You can rename this if needed.                                                                    |
+| `runs-on:`               | Defines the virtual machine GitHub will use to run the job. `ubuntu-latest` uses the latest Ubuntu Linux environment. |
+| `steps:`                 | A list of actions or commands GitHub Actions will execute in order.                                                    |
+| `- name:`                | A readable name for the step, shown in the GitHub Actions UI.                                                          |
+| `uses:`                  | Refers to a GitHub Action maintained by others. Here, `actions/checkout@v3` checks out the repo code into the runner. |
+| `run:`                   | Runs shell commands directly on the runner. This is used to install Vale and run it on the repository files.          |
+| `curl -fsSL ...`         | This command downloads and installs the Vale binary using a shell script from Vale’s official site.                    |
+| `echo "$HOME/.local/bin" >> $GITHUB_PATH` | Ensures the installed Vale binary is added to the system PATH so it can be used in the next step.       |
+| `vale .`                 | Runs Vale on the current directory (.) to check all markdown and documentation files according to your rules.          |
