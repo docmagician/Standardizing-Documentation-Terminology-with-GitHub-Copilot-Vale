@@ -55,7 +55,7 @@ Vale is a simple tool that helps us keep our documentation consistent by making 
    This specifies which files Vale should check.If you want to check YAML files too.  
    - ``BasedOnStyles = Terminology``
    This tells Vale to apply rules from a style file named Terminology.yml.
-   The file must be stored inside .vale/Styles/Terminology.yml
+   The file must be stored inside .vale/Styles/Terminology.yml  
    Example:
       ```sh 
      StylesPath = .vale/Styles  
