@@ -22,7 +22,26 @@ Example:
 Once you push your changes to the main or develop branch, or if you open a pull request, GitHub Actions automatically runs the terminology check.  
 
 What happens:  
-The GitHub Actions workflow installs Vale and checks your content.   
-If there are no issues, you’ll see a success message.    
-If there are problems, it flags the incorrect terms and shows what needs to be fixed.  
-You can view the results in the Actions tab of your repository or in the pull request under the Checks section.
+- The GitHub Actions workflow installs Vale and checks your content.   
+- If there are no issues, you’ll see a success message.    
+- If there are problems, it flags the incorrect terms and shows what needs to be fixed.  
+
+You'll find the results in the Actions tab of your repo, or directly in your pull request under Checks.
+### Fix Any Terminology Issues
+If Vale reports a problem:
+1. Open the affected file.
+2. Find the word Vale flagged.
+3. Replace it with the preferred term (as defined in your Terminology.yml file).
+4. Save, commit, and push the update.    
+
+The workflow will run again and confirm once the issue is resolved.
+### Update Your Terminology Rules (Optional)
+Keep your Vale rules up to date with the style and terms your team has agreed on. If new preferences come up during team discussions or reviews, just update the Terminology.yml file in .vale/Styles.  
+For example, if your team prefers using see instead of refer, or shows instead of displays, add those in the file like this:
+```She 
+swap:  
+  displays: shows  
+  refer: see  
+  user-friendly: intuitive
+  ```
+  Save your changes and commit them to the repo. Vale will use the updated rules the next time it runs, whether locally or in GitHub Actions.
