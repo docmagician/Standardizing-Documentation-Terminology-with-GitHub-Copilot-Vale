@@ -4,7 +4,7 @@ After setting up GitHub Copilot, Vale, and GitHub Actions, you can start using t
 GitHub Copilot acts as a smart writing assistant inside VS Code. It suggests phrases and completions based on what you're writing, which helps maintain a consistent writing style and speeds up the process.
 
 To use it:
- - Open a Markdown (.md) or YAML (.yml, .yaml) file in VS Code.
+ - Open a Markdown `(.md)` or YAML `(.yml, .yaml)` file in VS Code.
 - Start typing — Copilot will suggest content automatically.
 - Press Tab to accept a suggestion or use Alt + ] / Alt + [ to move between suggestions.  
 ```sh
@@ -45,3 +45,6 @@ swap:
   user-friendly: intuitive
   ```
   Save your changes and commit them to the repo. Vale will use the updated rules the next time it runs, whether locally or in GitHub Actions.
+
+## Project Structure Overview
+Your repository should look like this after completing the setup:

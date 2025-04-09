@@ -1,0 +1,27 @@
+name: Terminology Check
+
+on:
+  push:
+    paths:
+      - '**.md'
+  pull_request:
+    paths:
+      - '**.md'
+
+jobs:
+  vale:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Install Vale
+        run: |
+          curl -fsSL https://github.com/errata-ai/vale/releases/latest/download/vale_Linux_64-bit.tar.gz -o vale.tar.gz
+          tar -xzf vale.tar.gz
+          sudo mv vale /usr/local/bin/
+
+      - name: Run Vale
+        run: |
+          vale .

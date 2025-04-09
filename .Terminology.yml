@@ -1,0 +1,21 @@
+extends: substitution
+message: "Prefer '%s' over '%s'"
+ignorecase: true
+level: error
+swap:
+  sign in:
+    - "login"
+    - "log in"
+  sign out:
+    - "logout"
+    - "log out"
+  select:
+    - "choose"
+    - "pick"
+  run:
+    - "execute"
+  shows:
+    - "displays"
+  Refer:
+    - "Learn more"
+    - "See"
