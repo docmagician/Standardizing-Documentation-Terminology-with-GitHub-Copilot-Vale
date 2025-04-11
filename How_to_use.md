@@ -46,5 +46,3 @@ swap:
   ```
   Save your changes and commit them to the repo. Vale will use the updated rules the next time it runs, whether locally or in GitHub Actions.
 
-## Project Structure Overview
-Your repository should look like this after completing the setup:
