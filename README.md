@@ -38,5 +38,5 @@ Encourages team members to update and refine the terminology guide.
 
 ## 🔗 Getting Started   
 📌 **[Setting Up Terminology Check](SETUP.md)** – Learn how to configure Vale and GitHub Actions for automated terminology checks.  
-📌 **[How to Use Terminology Check](USAGE.md)** – Understand how to work with the terminology guide, fix flagged issues, and collaborate effectively.  
-📌 **[Style Guide](STYLE_GUIDE.md)** – Use this as your default style guide, or modify it to fit your team's writing rules. Also, contribute by adding common writing style rules and terminology improvements to keep it useful for everyone.  
+📌 **[How to Use Terminology Check](How_to_use.md)** – Understand how to work with the terminology guide, fix flagged issues, and collaborate effectively.  
+📌 **[Style Guide](.Terminology.yml)** – Use this as your default style guide, or modify it to fit your team's writing rules. Also, contribute by adding common writing style rules and terminology improvements to keep it useful for everyone.  
